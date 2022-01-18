@@ -14,7 +14,13 @@ Project E 是一个 基于Koishi 框架的QQ机器人
 './project-e/koishi-plugin-project-e-core': {},
 './project-e/koishi-plugin-netease-music': {},
 './project-e/koishi-plugin-debug': {},
-'./project-e/koishi-plugin-manger': {},
+'./project-e/koishi-plugin-chat': {},
+'./project-e/koishi-plugin-esu': {},
+'./project-e/koishi-plugin-payment': {},
+'./project-e/koishi-plugin-misc': {},
+'./project-e/koishi-plugin-inventory': {},
+'./project-e/koishi-plugin-shop': {},
+'./project-e/koishi-plugin-setu': {},
 ```
 
 ## ToDo
