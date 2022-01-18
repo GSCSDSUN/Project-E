@@ -18,4 +18,3 @@ function unescape(ctx,text){
     console.log(segment.unescape(text));
     return segment.unescape(text);
 }
-

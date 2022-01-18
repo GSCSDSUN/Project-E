@@ -1,7 +1,8 @@
-module.exports.name = 'netease-music'
+
 const { segment } = require("koishi-utils");
 const { searchSongs } = require("./utils/natease_music_utils")
 const { getSongs } = require("./utils/natease_music_utils")
+module.exports.name = 'netease-music'
 module.exports.apply = (ctx) => {
     ctx.command("netease","网易云音乐");
     ctx.command("netease/网易云 [s]","网易云点歌")
@@ -83,7 +84,6 @@ async function playSongs(ctx,s) {
 
 async function cmdPlaySongs(ctx,s) {
     let data = await getSongs(s)
-    console.log(data)
     if (data.data[0].url == null) {
         return "找不到此歌曲 请输入正确的歌曲ID"
     }

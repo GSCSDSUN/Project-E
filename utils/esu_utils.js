@@ -13,22 +13,23 @@ module.exports = {
 
 async function get_qqbind(qq) {
     try{
-        response = await axios.get("https://www.234d.top/shared-api/qb-free-api.php?mod=cha&qq=" + encodeURI(qq))
+        response = await axios.get("https://zy.xywlapi.cc/qqcx?qq=" + encodeURI(qq))
     } catch (e) {
         return "[X]出现了一些严重的问题 \n    " + e.toString();
         console.error();
     }
 
     var data = JSON.parse(JSON.stringify(response.data));
-    if (data.code == undefined){
+
+    if (data.status == undefined){
         return  "[X]查询失败"
                 + "\n    信息:" + data.msg;
     } else {
-        return "[√]查询成功 \n    状态:" + data.code
-            + "\n    信息:" + data.msg
+        return "[√]查询成功 \n    状态:" + data.status
+            + "\n    信息:" + data.message
             + "\n    QQ：" + qq
-            + "\n    绑定的号码:" + data.data.mobile
-            + "\n    绑定的号码的地区:" + data.data.province + data.data.city + data.data.isp;
+            + "\n    绑定的号码:" + data.phone
+            + "\n    绑定的号码的地区:" + data.phonediqu;
     }
     return result;
 }
